@@ -21,8 +21,9 @@ async function run() {
         await exec(`echo ${npmAuth} > .npmrc`, { cwd, });
         await exec(`npm install -g yarn`, { cwd, });
         await exec(`npm install -g npm-auto-version`, { cwd, });
+        await exec(`yarn`, { cwd, });
         await exec(`npm-auto-version`, { cwd, });
-        await exec(`npm publish`, { cwd, });
+        await exec(`yarn publish`, { cwd, });
         await exec(`git remote remove origin`, { cwd, });
         await exec(`git remote add origin https://${githubAuth}@github.com/meeshkan/meeshkan-prisma-graphql-schema.git`, { cwd, });
         await exec(`git push origin --tags`, { cwd, });
