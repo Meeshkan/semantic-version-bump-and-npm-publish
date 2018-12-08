@@ -1,4 +1,3 @@
-import * as util from 'util';
 import * as tl from 'azure-pipelines-task-lib/task';
 
 const _exec = require('child_process').exec;
