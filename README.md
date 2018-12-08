@@ -1,7 +1,5 @@
-# meeshkan-prisma-graphql-schema-release-task
-Build task for Meeshkan Prisma GraphQL Schema.
-
-This deploys the prisma API to an endpoint (should be production), bumps the version using semantic versioning and publishes to NPM to be consumed by other projects.
+# semantic-version-bump-and-npm-publish
+Build task to bump a semantic version and deploy to npm
 
 ## To create
 ```

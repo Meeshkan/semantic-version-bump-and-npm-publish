@@ -17,6 +17,8 @@ async function run() {
     try {
         const npmAuth: string = tl.getInput('npmauth', true);
         const githubAuth: string = tl.getInput('githubauth', true);
+        const org: string = tl.getInput('org', true);
+        const repo: string = tl.getInput('repo', true);
         const cwd = tl.getInput('workingdirectory', true);
         await exec(`echo ${npmAuth} > .npmrc`, { cwd, });
         await exec(`npm install -g yarn`, { cwd, });
@@ -25,7 +27,7 @@ async function run() {
         await exec(`npm-auto-version`, { cwd, });
         await exec(`yarn publish`, { cwd, });
         await exec(`git remote remove origin`, { cwd, });
-        await exec(`git remote add origin https://${githubAuth}@github.com/meeshkan/meeshkan-prisma-graphql-schema.git`, { cwd, });
+        await exec(`git remote add origin https://${githubAuth}@github.com/${org}/${repo}.git`, { cwd, });
         await exec(`git push origin --tags`, { cwd, });
         console.log();
     } catch (err) {

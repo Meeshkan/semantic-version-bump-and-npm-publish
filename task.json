@@ -9,7 +9,7 @@
     "version": {
         "Major": 0,
         "Minor": 0,
-        "Patch": 2
+        "Patch": 3
     },
     "instanceNameFormat": "Semantic Version Bump And NPM Publish",
     "inputs": [
@@ -31,6 +31,20 @@
             "name": "githubauth",
             "type": "string",
             "label": "GitHub Authentication",
+            "defaultValue": "",
+            "required": true
+        },
+        {
+            "name": "org",
+            "type": "string",
+            "label": "GitHub Org",
+            "defaultValue": "",
+            "required": true
+        },
+        {
+            "name": "repo",
+            "type": "string",
+            "label": "GitHub repo",
             "defaultValue": "",
             "required": true
         }
