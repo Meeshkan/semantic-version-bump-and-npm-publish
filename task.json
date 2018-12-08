@@ -1,0 +1,43 @@
+{
+    "id": "16931280-fafc-11e8-9467-c5bb4eccdbe5",
+    "name": "SemanticVersionBumpAndNPMPublish",
+    "friendlyName": "Semantic versioning and NPM publishing.",
+    "description": "Bumps a semantic version and publishes to NPM from Azure DevOps.",
+    "helpMarkDown": "",
+    "category": "Utility",
+    "author": "Mike Solomon",
+    "version": {
+        "Major": 0,
+        "Minor": 0,
+        "Patch": 1
+    },
+    "instanceNameFormat": "Semantic Version Bump And NPM Publish",
+    "inputs": [
+        {
+            "name": "workingdirectory",
+            "type": "filePath",
+            "label": "Working Directory",
+            "defaultValue": "",
+            "required": true
+        },
+        {
+            "name": "npmauth",
+            "type": "string",
+            "label": "NPM Authentication",
+            "defaultValue": "",
+            "required": true
+        },
+        {
+            "name": "githubauth",
+            "type": "string",
+            "label": "GitHub Authentication",
+            "defaultValue": "",
+            "required": true
+        }
+    ],
+    "execution": {
+        "Node": {
+            "target": "dist/index.js"
+        }
+    }
+}
